@@ -1,0 +1,46 @@
+{
+  "name": "agent-killer",
+  "version": "0.7.15",
+  "description": "Agent Killer \u2014 trust-hardened agent arena for proving coding agents under adversarial, long-horizon, and verifiable trials.",
+  "type": "module",
+  "bin": {
+    "agent-killer": "./src/cli.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "validate": "node src/cli.js validate",
+    "self-test": "node src/cli.js self-test",
+    "test": "node tests/core.test.mjs && node tests/platform.test.mjs && node tests/v06.test.mjs && node tests/security.audit.mjs && node tests/v07.test.mjs && node tests/review.v072.mjs && node tests/review.v073.mjs && node tests/review.v075.mjs && node tests/review.v076.mjs && node tests/review.v077.mjs && node tests/review.v078.mjs && node tests/review.v079.mjs && node tests/review.v0710.mjs && node tests/review.v0711.mjs && node tests/review.v0712.mjs && node tests/review.v0713.mjs && node tests/review.v0714.mjs && node tests/review.v0715.mjs",
+    "start": "node src/server.js",
+    "verify": "npm test && npm run validate && npm run self-test && npm run v07-self-test && npm run v074-audit && npm run v075-audit && npm run smoke-api && npm run smoke-public && npm run v077-audit && npm run v078-audit && node tests/review.v079.mjs && node tests/review.v0711.mjs && node tests/review.v0712.mjs && node tests/review.v0713.mjs && node tests/review.v0714.mjs && node tests/review.v0715.mjs",
+    "smoke-api": "node tests/api.smoke.mjs",
+    "generate": "node src/cli.js generate",
+    "gauntlet": "node src/cli.js gauntlet",
+    "roulette": "node src/cli.js roulette",
+    "killchain": "node src/cli.js killchain",
+    "blackbox": "node src/cli.js blackbox",
+    "dna": "node src/cli.js dna",
+    "passport": "node src/cli.js passport",
+    "human": "node src/cli.js human",
+    "matrix": "node src/cli.js matrix",
+    "audit": "node tests/security.audit.mjs",
+    "smoke-public": "node tests/api.public.smoke.mjs",
+    "v07": "node src/cli.js v07 suite",
+    "v07-self-test": "node src/cli.js v07 self-test",
+    "v072-audit": "node tests/review.v072.mjs",
+    "v073-audit": "node tests/review.v073.mjs",
+    "v074-audit": "node tests/review.v074.mjs",
+    "v075-audit": "node tests/review.v075.mjs",
+    "v076-audit": "node tests/review.v076.mjs",
+    "v077-audit": "node tests/review.v077.mjs",
+    "v078-audit": "node tests/review.v078.mjs",
+    "v079-audit": "node tests/review.v079.mjs && node tests/review.v0711.mjs",
+    "v0712-audit": "node tests/review.v0712.mjs",
+    "v0713-audit": "node tests/review.v0713.mjs",
+    "v0714-audit": "node tests/review.v0714.mjs",
+    "v0715-audit": "node tests/review.v0715.mjs"
+  },
+  "license": "MIT"
+}

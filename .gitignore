@@ -1,0 +1,12 @@
+node_modules/
+results/*.json
+results/*.receipt.json
+results/.keys/
+.agent-killer/runs/*
+!results/.gitkeep
+!submissions/.gitkeep
+.DS_Store
+Thumbs.db
+
+benchmarks/generated/
+.agent-killer/keys/
