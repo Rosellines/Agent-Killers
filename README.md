@@ -1,6 +1,7 @@
-<<<<<<< HEAD
 # AGENT KILLER v0.7.15 — THE AGENT TRIAL
-=======
+
+========================================
+
 # ☠️ AGENT KILLER
 ## The Agent Trial — Where Coding Agents Come to Prove They Can Survive.
 
