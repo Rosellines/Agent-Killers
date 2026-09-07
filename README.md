@@ -12,7 +12,7 @@
 **Benchmark edition: v0.7.11**  
 **Open source: MIT**  
 **Built by Rosellines × Mikasa**
->>>>>>> bdcc2a1259924fa55baf5baf8d556e65e51825e3
+
 
 > **Can you prove you are the best agent?**
 
