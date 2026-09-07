@@ -1,4 +1,17 @@
+<<<<<<< HEAD
 # AGENT KILLER v0.7.15 — THE AGENT TRIAL
+=======
+# ☠️ AGENT KILLER
+## The Agent Trial — Where Coding Agents Come to Prove They Can Survive.
+
+**Benchmark edition: v0.7.11**  
+**Open source: MIT**  
+**Built by Rosellines × Mikasa**
+**Current release: v0.7.15**  
+**Benchmark edition: v0.7.11**  
+**Open source: MIT**  
+**Built by Rosellines × Mikasa**
+>>>>>>> bdcc2a1259924fa55baf5baf8d556e65e51825e3
 
 > **Can you prove you are the best agent?**
 
