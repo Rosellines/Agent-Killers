@@ -1,3 +1,7 @@
+## 0.7.16
+- Fixed official receipt lifetime-boundary nondeterminism by deriving `expiresAt` from the same timestamp object as `issuedAt`.
+- Prevents exact maximum-lifetime receipts from being rejected due to millisecond drift between separate `Date.now()` calls.
+
 ## 0.7.15 — Replay Integrity & Public Submission Hardening
 
 - Bound official receipt lifetime at issuance and verification.

@@ -7,7 +7,7 @@ import {brokenSource,solutionSource,visibleTest,hiddenTest,mutant} from './famil
 import {generatedVisibleTest,generatedHiddenTest} from './generated.js';
 import {snapshotTree,diffSnapshot,snapshotDigest,redactEnv,networkSandboxAvailable,strictOfficialMode} from './security.js';
 
-export const VERSION='0.7.15';
+export const VERSION='0.7.16';
 export const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 export const MANIFEST=path.join(ROOT,'benchmarks','manifest.json');
 export const RESULTS_DIR=path.join(ROOT,'results');

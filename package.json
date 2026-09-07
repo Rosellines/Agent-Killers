@@ -1,6 +1,6 @@
 {
   "name": "agent-killer",
-  "version": "0.7.15",
+  "version": "0.7.16",
   "description": "Agent Killer \u2014 trust-hardened agent arena for proving coding agents under adversarial, long-horizon, and verifiable trials.",
   "type": "module",
   "bin": {

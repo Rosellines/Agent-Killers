@@ -7,7 +7,7 @@ import {RemoteExecutionGate} from '../src/resource-governance.js';
 assert.match(VERSION,/^0\.7\.\d+$/);
 assert.equal(JOB_LIFETIME_DEFAULT_MS,30*60_000);
 assert.equal(JOB_LIFETIME_MAX_MS,30*60_000);
-assert.match(JSON.parse(await fs.readFile(new URL('../package.json',import.meta.url),'utf8')).version,/^0\.7\.(?:14|15)$/);
+assert.match(JSON.parse(await fs.readFile(new URL('../package.json',import.meta.url),'utf8')).version,/^0\.7\.(?:14|15|16)$/);
 
 for (const fn of [runSuite,runAdversarialSuite]) {
   await assert.rejects(
