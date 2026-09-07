@@ -1,0 +1,130 @@
+{
+  "mock": {
+    "label": "Agent Killer Mock",
+    "type": "builtin",
+    "description": "Reference solver for harness tests."
+  },
+  "codex": {
+    "label": "OpenAI Codex CLI",
+    "type": "command",
+    "command": "codex",
+    "args": [
+      "exec",
+      "--sandbox",
+      "workspace-write",
+      "--skip-git-repo-check",
+      "{prompt}"
+    ],
+    "docs": "https://developers.openai.com/codex"
+  },
+  "claude": {
+    "label": "Claude Code",
+    "type": "command",
+    "command": "claude",
+    "args": [
+      "-p",
+      "{prompt}"
+    ],
+    "docs": "https://docs.anthropic.com/en/docs/claude-code"
+  },
+  "gemini": {
+    "label": "Gemini CLI",
+    "type": "command",
+    "command": "gemini",
+    "args": [
+      "-p",
+      "{prompt}"
+    ],
+    "docs": "https://github.com/google-gemini/gemini-cli"
+  },
+  "copilot": {
+    "label": "GitHub Copilot CLI",
+    "type": "command",
+    "command": "copilot",
+    "args": [
+      "-p",
+      "{prompt}"
+    ],
+    "docs": "https://docs.github.com/en/copilot/get-started/cli-quickstart"
+  },
+  "opencode": {
+    "label": "OpenCode",
+    "type": "command",
+    "command": "opencode",
+    "args": [
+      "run",
+      "{prompt}"
+    ],
+    "docs": "https://opencode.ai/docs"
+  },
+  "aider": {
+    "label": "Aider",
+    "type": "command",
+    "command": "aider",
+    "args": [
+      "--message",
+      "{prompt}",
+      "--yes-always"
+    ],
+    "docs": "https://aider.chat/"
+  },
+  "qwen": {
+    "label": "Qwen Code",
+    "type": "command",
+    "command": "qwen",
+    "args": [
+      "-p",
+      "{prompt}"
+    ],
+    "docs": "https://github.com/QwenLM/qwen-code"
+  },
+  "goose": {
+    "label": "Goose",
+    "type": "command",
+    "command": "goose",
+    "args": [
+      "run",
+      "{prompt}"
+    ],
+    "docs": "https://block.github.io/goose/"
+  },
+  "kimi": {
+    "label": "Kimi Code CLI",
+    "type": "command",
+    "command": "kimi",
+    "args": [
+      "--prompt",
+      "{prompt}"
+    ],
+    "docs": "https://www.kimi.com/"
+  },
+  "amp": {
+    "label": "Amp",
+    "type": "command",
+    "command": "amp",
+    "args": [
+      "--execute",
+      "{prompt}"
+    ],
+    "docs": "https://ampcode.com/"
+  },
+  "cursor": {
+    "label": "Cursor Agent CLI",
+    "type": "command",
+    "command": "cursor-agent",
+    "args": [
+      "-p",
+      "{prompt}"
+    ],
+    "docs": "https://docs.cursor.com/"
+  },
+  "custom": {
+    "label": "Custom Agent",
+    "type": "custom",
+    "command": null,
+    "args": [
+      "{prompt}"
+    ],
+    "docs": null
+  }
+}

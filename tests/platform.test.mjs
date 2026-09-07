@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';
+import {createKeyPair,signPayload,verifyPayload,verifyReceipt} from '../src/receipts.js';
+import {listAdversarialScenarios} from '../src/adversarial.js';
+import {leaderboard} from '../src/runner.js';
+const kp=createKeyPair();
+const payload={b:2,a:{z:1,y:[3,2,1]}};
+const sig=signPayload(payload,kp.privateKey);assert.equal(verifyPayload(payload,sig,kp.publicKey),true);assert.equal(verifyPayload({...payload,b:3},sig,kp.publicKey),false);
+const receipt={schema_version:'agent-killer.receipt.v5',signature_algorithm:'Ed25519-canonical-SHA256-v2',receipt_id:'test',issuedAt:'2026-01-01T00:00:00Z',suiteId:'suite',resultIds:['r'],agent:'mock',provider:'local',model:'mock',version:'1',track:'core',score:{average:100},resultsDigest:'x',metadata:{},publicKey:kp.publicKey,issuerFingerprint:'x',trust:'self-attested',issuer:'local'};receipt.signature=signPayload(receipt,kp.privateKey);assert.equal(verifyReceipt(receipt).valid,true);receipt.score.average=99;assert.equal(verifyReceipt(receipt).valid,false);
+assert.ok(listAdversarialScenarios().length>=8);
+const rows=[{agent:'codex',provider:'openai',model:'gpt',version:'1',task:'t1',score:90,visible:true,hidden:true,mutation:true,durationMs:1},{agent:'codex',provider:'openai',model:'gpt',version:'2',task:'t1',score:95,visible:true,hidden:true,mutation:true,durationMs:1}];const board=leaderboard(rows,[{id:'t1',weight:1}]);assert.equal(board.length,2);assert.equal(board[0].version,'2');
+console.log('PLATFORM TESTS OK');
+import fs from 'node:fs/promises';
+import {makeWorkspace,evaluate,runCommand} from '../src/core.js';
+const ws=await makeWorkspace({id:'SEC-TEST',kind:'pagination',slug:'sec-test',title:'security',description:'x'});
+await fs.writeFile(`${ws.project}/test.js`,'console.log("tampered")');
+const ev=await evaluate({id:'SEC-TEST',kind:'pagination',slug:'sec-test',title:'security',description:'x'},ws.project,{code:0,timedOut:false,stdout:'',stderr:'',durationMs:1},ws);
+assert.equal(ev.checks.oracle_integrity,true);assert.equal(ev.checks.patch_scope,false);await fs.rm(ws.dir,{recursive:true,force:true});
+console.log('PROTECTED ORACLE TEST OK');

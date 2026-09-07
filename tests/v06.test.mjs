@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {generatePack} from '../src/challenge-pack.js';
+import {selectBlackBox} from '../src/blackbox.js';
+import {agentDNA} from '../src/profiles.js';
+import {verifyReceipt,issueReceipt} from '../src/receipts.js';
+import {ensureDirs,loadTask} from '../src/core.js';
+await ensureDirs();
+const p1=await generatePack({seed:'test-seed',count:7}); const p2=await generatePack({seed:'test-seed',count:7}); assert.deepEqual(p1.tasks.map(x=>x.id),p2.tasks.map(x=>x.id),'generator must be deterministic');
+const g=await loadTask(p1.tasks[0].id); assert(g,'generated task must be loadable');
+const bb=await selectBlackBox({seed:'blackbox-test'}); assert.equal(bb.mode,'blackbox'); assert.equal(bb.commitment.length,64);
+const dna=agentDNA([{evaluation:{checks:{visible_tests:true,hidden_tests:true,mutation_killed:true,secret_hygiene:true,patch_scope:true,deterministic_rerun:true,agent_exit_zero:true},score:{correctness:55,efficiency:5}}}]); assert(dna.score.overall>0); assert(dna.tags.length>0);
+const r=await issueReceipt({suiteId:'suite-test',resultIds:['r1'],agent:'mock',provider:'local',model:'test-model',version:'1',track:'core',score:{average:100},results:[{id:'r1',score:100}],metadata:{test:true}}); assert.equal(verifyReceipt(r).valid,true); const tam={...r,score:{average:99}}; assert.equal(verifyReceipt(tam).valid,false,'tampered receipt must fail');
+console.log('V0.6 TESTS OK');

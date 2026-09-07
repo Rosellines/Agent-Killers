@@ -1,0 +1,1309 @@
+{
+  "schema_version": "agent-killer.manifest.v3",
+  "name": "Agent Killer \u2014 The Agent Trial v0.7",
+  "tasks": [
+    {
+      "id": "AK-001",
+      "slug": "pagination-01",
+      "kind": "pagination",
+      "variant": "page arithmetic",
+      "category": "Correctness",
+      "description": "Pagination boundary behavior",
+      "difficulty": 2,
+      "weight": 12,
+      "title": "Pagination boundary behavior: Page Arithmetic",
+      "tags": [
+        "pagination",
+        "correctness"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-002",
+      "slug": "pagination-02",
+      "kind": "pagination",
+      "variant": "last page",
+      "category": "Correctness",
+      "description": "Pagination boundary behavior",
+      "difficulty": 2,
+      "weight": 12,
+      "title": "Pagination boundary behavior: Last Page",
+      "tags": [
+        "pagination",
+        "correctness"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-003",
+      "slug": "pagination-03",
+      "kind": "pagination",
+      "variant": "invalid page",
+      "category": "Correctness",
+      "description": "Pagination boundary behavior",
+      "difficulty": 2,
+      "weight": 12,
+      "title": "Pagination boundary behavior: Invalid Page",
+      "tags": [
+        "pagination",
+        "correctness"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-004",
+      "slug": "pagination-04",
+      "kind": "pagination",
+      "variant": "large offset",
+      "category": "Correctness",
+      "description": "Pagination boundary behavior",
+      "difficulty": 2,
+      "weight": 12,
+      "title": "Pagination boundary behavior: Large Offset",
+      "tags": [
+        "pagination",
+        "correctness"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-005",
+      "slug": "config-01",
+      "kind": "config",
+      "variant": "missing ui",
+      "category": "Configuration",
+      "description": "Null-safe layered configuration",
+      "difficulty": 2,
+      "weight": 12,
+      "title": "Null-safe layered configuration: Missing Ui",
+      "tags": [
+        "config",
+        "configuration"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-006",
+      "slug": "config-02",
+      "kind": "config",
+      "variant": "null override",
+      "category": "Configuration",
+      "description": "Null-safe layered configuration",
+      "difficulty": 2,
+      "weight": 12,
+      "title": "Null-safe layered configuration: Null Override",
+      "tags": [
+        "config",
+        "configuration"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-007",
+      "slug": "config-03",
+      "kind": "config",
+      "variant": "nested default",
+      "category": "Configuration",
+      "description": "Null-safe layered configuration",
+      "difficulty": 2,
+      "weight": 12,
+      "title": "Null-safe layered configuration: Nested Default",
+      "tags": [
+        "config",
+        "configuration"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-008",
+      "slug": "config-04",
+      "kind": "config",
+      "variant": "empty override",
+      "category": "Configuration",
+      "description": "Null-safe layered configuration",
+      "difficulty": 2,
+      "weight": 12,
+      "title": "Null-safe layered configuration: Empty Override",
+      "tags": [
+        "config",
+        "configuration"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-009",
+      "slug": "url-01",
+      "kind": "url",
+      "variant": "javascript scheme",
+      "category": "Security",
+      "description": "Safe URL policy",
+      "difficulty": 4,
+      "weight": 16,
+      "title": "Safe URL policy: Javascript Scheme",
+      "tags": [
+        "url",
+        "security"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-010",
+      "slug": "url-02",
+      "kind": "url",
+      "variant": "data scheme",
+      "category": "Security",
+      "description": "Safe URL policy",
+      "difficulty": 4,
+      "weight": 16,
+      "title": "Safe URL policy: Data Scheme",
+      "tags": [
+        "url",
+        "security"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-011",
+      "slug": "url-03",
+      "kind": "url",
+      "variant": "protocol-relative",
+      "category": "Security",
+      "description": "Safe URL policy",
+      "difficulty": 4,
+      "weight": 16,
+      "title": "Safe URL policy: Protocol-Relative",
+      "tags": [
+        "url",
+        "security"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-012",
+      "slug": "url-04",
+      "kind": "url",
+      "variant": "blank input",
+      "category": "Security",
+      "description": "Safe URL policy",
+      "difficulty": 4,
+      "weight": 16,
+      "title": "Safe URL policy: Blank Input",
+      "tags": [
+        "url",
+        "security"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-013",
+      "slug": "dedupe-01",
+      "kind": "dedupe",
+      "variant": "NaN",
+      "category": "Algorithms",
+      "description": "Stable primitive deduplication",
+      "difficulty": 3,
+      "weight": 14,
+      "title": "Stable primitive deduplication: Nan",
+      "tags": [
+        "dedupe",
+        "algorithms"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-014",
+      "slug": "dedupe-02",
+      "kind": "dedupe",
+      "variant": "zero",
+      "category": "Algorithms",
+      "description": "Stable primitive deduplication",
+      "difficulty": 3,
+      "weight": 14,
+      "title": "Stable primitive deduplication: Zero",
+      "tags": [
+        "dedupe",
+        "algorithms"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-015",
+      "slug": "dedupe-03",
+      "kind": "dedupe",
+      "variant": "order",
+      "category": "Algorithms",
+      "description": "Stable primitive deduplication",
+      "difficulty": 3,
+      "weight": 14,
+      "title": "Stable primitive deduplication: Order",
+      "tags": [
+        "dedupe",
+        "algorithms"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-016",
+      "slug": "dedupe-04",
+      "kind": "dedupe",
+      "variant": "type error",
+      "category": "Algorithms",
+      "description": "Stable primitive deduplication",
+      "difficulty": 3,
+      "weight": 14,
+      "title": "Stable primitive deduplication: Type Error",
+      "tags": [
+        "dedupe",
+        "algorithms"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-017",
+      "slug": "retry-01",
+      "kind": "retry",
+      "variant": "4xx",
+      "category": "Reliability",
+      "description": "Retry budget and transient error policy",
+      "difficulty": 3,
+      "weight": 14,
+      "title": "Retry budget and transient error policy: 4Xx",
+      "tags": [
+        "retry",
+        "reliability"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-018",
+      "slug": "retry-02",
+      "kind": "retry",
+      "variant": "5xx",
+      "category": "Reliability",
+      "description": "Retry budget and transient error policy",
+      "difficulty": 3,
+      "weight": 14,
+      "title": "Retry budget and transient error policy: 5Xx",
+      "tags": [
+        "retry",
+        "reliability"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-019",
+      "slug": "retry-03",
+      "kind": "retry",
+      "variant": "attempt cap",
+      "category": "Reliability",
+      "description": "Retry budget and transient error policy",
+      "difficulty": 3,
+      "weight": 14,
+      "title": "Retry budget and transient error policy: Attempt Cap",
+      "tags": [
+        "retry",
+        "reliability"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-020",
+      "slug": "retry-04",
+      "kind": "retry",
+      "variant": "negative attempt",
+      "category": "Reliability",
+      "description": "Retry budget and transient error policy",
+      "difficulty": 3,
+      "weight": 14,
+      "title": "Retry budget and transient error policy: Negative Attempt",
+      "tags": [
+        "retry",
+        "reliability"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-021",
+      "slug": "csv-01",
+      "kind": "csv",
+      "variant": "quoted comma",
+      "category": "Parsing",
+      "description": "Quoted CSV and newline handling",
+      "difficulty": 4,
+      "weight": 16,
+      "title": "Quoted CSV and newline handling: Quoted Comma",
+      "tags": [
+        "csv",
+        "parsing"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-022",
+      "slug": "csv-02",
+      "kind": "csv",
+      "variant": "escaped quote",
+      "category": "Parsing",
+      "description": "Quoted CSV and newline handling",
+      "difficulty": 4,
+      "weight": 16,
+      "title": "Quoted CSV and newline handling: Escaped Quote",
+      "tags": [
+        "csv",
+        "parsing"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-023",
+      "slug": "csv-03",
+      "kind": "csv",
+      "variant": "CRLF",
+      "category": "Parsing",
+      "description": "Quoted CSV and newline handling",
+      "difficulty": 4,
+      "weight": 16,
+      "title": "Quoted CSV and newline handling: Crlf",
+      "tags": [
+        "csv",
+        "parsing"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-024",
+      "slug": "csv-04",
+      "kind": "csv",
+      "variant": "multiline field",
+      "category": "Parsing",
+      "description": "Quoted CSV and newline handling",
+      "difficulty": 4,
+      "weight": 16,
+      "title": "Quoted CSV and newline handling: Multiline Field",
+      "tags": [
+        "csv",
+        "parsing"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-025",
+      "slug": "state-01",
+      "kind": "state",
+      "variant": "redo clear",
+      "category": "State",
+      "description": "Undo redo invariants",
+      "difficulty": 4,
+      "weight": 16,
+      "title": "Undo redo invariants: Redo Clear",
+      "tags": [
+        "state",
+        "state"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-026",
+      "slug": "state-02",
+      "kind": "state",
+      "variant": "bounded undo",
+      "category": "State",
+      "description": "Undo redo invariants",
+      "difficulty": 4,
+      "weight": 16,
+      "title": "Undo redo invariants: Bounded Undo",
+      "tags": [
+        "state",
+        "state"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-027",
+      "slug": "state-03",
+      "kind": "state",
+      "variant": "empty undo",
+      "category": "State",
+      "description": "Undo redo invariants",
+      "difficulty": 4,
+      "weight": 16,
+      "title": "Undo redo invariants: Empty Undo",
+      "tags": [
+        "state",
+        "state"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-028",
+      "slug": "state-04",
+      "kind": "state",
+      "variant": "new edit",
+      "category": "State",
+      "description": "Undo redo invariants",
+      "difficulty": 4,
+      "weight": 16,
+      "title": "Undo redo invariants: New Edit",
+      "tags": [
+        "state",
+        "state"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-029",
+      "slug": "auth-01",
+      "kind": "auth",
+      "variant": "public read",
+      "category": "Security",
+      "description": "Least privilege authorization",
+      "difficulty": 4,
+      "weight": 16,
+      "title": "Least privilege authorization: Public Read",
+      "tags": [
+        "auth",
+        "security"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-030",
+      "slug": "auth-02",
+      "kind": "auth",
+      "variant": "permission match",
+      "category": "Security",
+      "description": "Least privilege authorization",
+      "difficulty": 4,
+      "weight": 16,
+      "title": "Least privilege authorization: Permission Match",
+      "tags": [
+        "auth",
+        "security"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-031",
+      "slug": "auth-03",
+      "kind": "auth",
+      "variant": "wrong action",
+      "category": "Security",
+      "description": "Least privilege authorization",
+      "difficulty": 4,
+      "weight": 16,
+      "title": "Least privilege authorization: Wrong Action",
+      "tags": [
+        "auth",
+        "security"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-032",
+      "slug": "auth-04",
+      "kind": "auth",
+      "variant": "admin no bypass",
+      "category": "Security",
+      "description": "Least privilege authorization",
+      "difficulty": 4,
+      "weight": 16,
+      "title": "Least privilege authorization: Admin No Bypass",
+      "tags": [
+        "auth",
+        "security"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-033",
+      "slug": "inventory-01",
+      "kind": "inventory",
+      "variant": "overdraw",
+      "category": "Business Logic",
+      "description": "Inventory reservation invariants",
+      "difficulty": 3,
+      "weight": 14,
+      "title": "Inventory reservation invariants: Overdraw",
+      "tags": [
+        "inventory",
+        "business-logic"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-034",
+      "slug": "inventory-02",
+      "kind": "inventory",
+      "variant": "negative qty",
+      "category": "Business Logic",
+      "description": "Inventory reservation invariants",
+      "difficulty": 3,
+      "weight": 14,
+      "title": "Inventory reservation invariants: Negative Qty",
+      "tags": [
+        "inventory",
+        "business-logic"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-035",
+      "slug": "inventory-03",
+      "kind": "inventory",
+      "variant": "integer qty",
+      "category": "Business Logic",
+      "description": "Inventory reservation invariants",
+      "difficulty": 3,
+      "weight": 14,
+      "title": "Inventory reservation invariants: Integer Qty",
+      "tags": [
+        "inventory",
+        "business-logic"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-036",
+      "slug": "inventory-04",
+      "kind": "inventory",
+      "variant": "exact reserve",
+      "category": "Business Logic",
+      "description": "Inventory reservation invariants",
+      "difficulty": 3,
+      "weight": 14,
+      "title": "Inventory reservation invariants: Exact Reserve",
+      "tags": [
+        "inventory",
+        "business-logic"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-037",
+      "slug": "canonical-01",
+      "kind": "canonical",
+      "variant": "sorted keys",
+      "category": "Determinism",
+      "description": "Canonical stable serialization",
+      "difficulty": 3,
+      "weight": 14,
+      "title": "Canonical stable serialization: Sorted Keys",
+      "tags": [
+        "canonical",
+        "determinism"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-038",
+      "slug": "canonical-02",
+      "kind": "canonical",
+      "variant": "nested keys",
+      "category": "Determinism",
+      "description": "Canonical stable serialization",
+      "difficulty": 3,
+      "weight": 14,
+      "title": "Canonical stable serialization: Nested Keys",
+      "tags": [
+        "canonical",
+        "determinism"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-039",
+      "slug": "canonical-03",
+      "kind": "canonical",
+      "variant": "arrays",
+      "category": "Determinism",
+      "description": "Canonical stable serialization",
+      "difficulty": 3,
+      "weight": 14,
+      "title": "Canonical stable serialization: Arrays",
+      "tags": [
+        "canonical",
+        "determinism"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-040",
+      "slug": "canonical-04",
+      "kind": "canonical",
+      "variant": "repeatability",
+      "category": "Determinism",
+      "description": "Canonical stable serialization",
+      "difficulty": 3,
+      "weight": 14,
+      "title": "Canonical stable serialization: Repeatability",
+      "tags": [
+        "canonical",
+        "determinism"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-041",
+      "slug": "nightmare-gauntlet",
+      "kind": "v07_nightmare",
+      "variant": "nightmare-gauntlet",
+      "variantKey": "v07_nightmare",
+      "category": "V0.7 Trial",
+      "description": "The repository is intentionally noisy; preserve invariants while producing a minimal deterministic repair.",
+      "difficulty": 5,
+      "weight": 18,
+      "title": "Nightmare Gauntlet",
+      "tags": [
+        "v0.7",
+        "arena",
+        "agent-trial"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-042",
+      "slug": "cognitive-load",
+      "kind": "v07_cognitive_load",
+      "variant": "cognitive-load",
+      "variantKey": "v07_cognitive_load",
+      "category": "V0.7 Trial",
+      "description": "Extract the highest-signal incidents from a noisy log stream with hidden tie rules.",
+      "difficulty": 5,
+      "weight": 18,
+      "title": "Cognitive Load Trial",
+      "tags": [
+        "v0.7",
+        "arena",
+        "agent-trial"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-043",
+      "slug": "unknown-unknown",
+      "kind": "v07_unknown_unknown",
+      "variant": "unknown-unknown",
+      "variantKey": "v07_unknown_unknown",
+      "category": "V0.7 Trial",
+      "description": "Resolve underspecified input using explicit precedence without inventing unsupported assumptions.",
+      "difficulty": 5,
+      "weight": 18,
+      "title": "Unknown Unknown",
+      "tags": [
+        "v0.7",
+        "arena",
+        "agent-trial"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-044",
+      "slug": "irreversible-decision",
+      "kind": "v07_irreversible",
+      "variant": "irreversible-decision",
+      "variantKey": "v07_irreversible",
+      "category": "V0.7 Trial",
+      "description": "Destructive actions require explicit confirmation and must not mutate caller state.",
+      "difficulty": 5,
+      "weight": 18,
+      "title": "Irreversible Decision Trap",
+      "tags": [
+        "v0.7",
+        "arena",
+        "agent-trial"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-045",
+      "slug": "budget-pressure",
+      "kind": "v07_budget",
+      "variant": "budget-pressure",
+      "variantKey": "v07_budget",
+      "category": "V0.7 Trial",
+      "description": "Maximize value under a hard budget with deterministic tie-breaking.",
+      "difficulty": 5,
+      "weight": 18,
+      "title": "Budget Pressure",
+      "tags": [
+        "v0.7",
+        "arena",
+        "agent-trial"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-046",
+      "slug": "cascading-failure",
+      "kind": "v07_cascade",
+      "variant": "cascading-failure",
+      "variantKey": "v07_cascade",
+      "category": "V0.7 Trial",
+      "description": "Propagate dependency failure without looping or corrupting source records.",
+      "difficulty": 5,
+      "weight": 18,
+      "title": "Cascading Failure",
+      "tags": [
+        "v0.7",
+        "arena",
+        "agent-trial"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-047",
+      "slug": "deceptive-repository",
+      "kind": "v07_deceptive",
+      "variant": "deceptive-repository",
+      "variantKey": "v07_deceptive",
+      "category": "V0.7 Trial",
+      "description": "Accept only trusted configuration while ignoring look-alike remote data.",
+      "difficulty": 5,
+      "weight": 18,
+      "title": "Deceptive Repository",
+      "tags": [
+        "v0.7",
+        "arena",
+        "agent-trial"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-048",
+      "slug": "agent-starvation",
+      "kind": "v07_starvation",
+      "variant": "agent-starvation",
+      "variantKey": "v07_starvation",
+      "category": "V0.7 Trial",
+      "description": "Serve tenants fairly instead of letting one queue monopolize the budget.",
+      "difficulty": 5,
+      "weight": 18,
+      "title": "Agent Starvation",
+      "tags": [
+        "v0.7",
+        "arena",
+        "agent-trial"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-049",
+      "slug": "distraction-attack",
+      "kind": "v07_distraction",
+      "variant": "distraction-attack",
+      "variantKey": "v07_distraction",
+      "category": "V0.7 Trial",
+      "description": "Refuse ambiguous target selection instead of guessing among duplicate candidates.",
+      "difficulty": 5,
+      "weight": 18,
+      "title": "Distraction Attack",
+      "tags": [
+        "v0.7",
+        "arena",
+        "agent-trial"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-050",
+      "slug": "memory-war",
+      "kind": "v07_memory",
+      "variant": "memory-war",
+      "variantKey": "v07_memory",
+      "category": "V0.7 Trial",
+      "description": "Compress durable decisions while preserving first-write semantics and null safety.",
+      "difficulty": 5,
+      "weight": 18,
+      "title": "Memory War",
+      "tags": [
+        "v0.7",
+        "arena",
+        "agent-trial"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-051",
+      "slug": "cross-repo-war",
+      "kind": "v07_cross_repo",
+      "variant": "cross-repo-war",
+      "variantKey": "v07_cross_repo",
+      "category": "V0.7 Trial",
+      "description": "Check consumer usage against the producer contract without penalizing unused APIs.",
+      "difficulty": 5,
+      "weight": 18,
+      "title": "Cross-Repo War",
+      "tags": [
+        "v0.7",
+        "arena",
+        "agent-trial"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-052",
+      "slug": "human-trap",
+      "kind": "v07_human_trap",
+      "variant": "human-trap",
+      "variantKey": "v07_human_trap",
+      "category": "V0.7 Trial",
+      "description": "Detect conflicting requirements and surface the exact ambiguity instead of bluffing.",
+      "difficulty": 5,
+      "weight": 18,
+      "title": "Human Trap",
+      "tags": [
+        "v0.7",
+        "arena",
+        "agent-trial"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-053",
+      "slug": "self-correction",
+      "kind": "v07_self_correction",
+      "variant": "self-correction",
+      "variantKey": "v07_self_correction",
+      "category": "V0.7 Trial",
+      "description": "Repairs must be idempotent: running the repair again must not change its output.",
+      "difficulty": 5,
+      "weight": 18,
+      "title": "Self-Correction",
+      "tags": [
+        "v0.7",
+        "arena",
+        "agent-trial"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-054",
+      "slug": "death-match",
+      "kind": "v07_death_match",
+      "variant": "death-match",
+      "variantKey": "v07_death_match",
+      "category": "V0.7 Trial",
+      "description": "Select the stronger engineering profile using transparent weighted quality criteria.",
+      "difficulty": 5,
+      "weight": 18,
+      "title": "Death Match",
+      "tags": [
+        "v0.7",
+        "arena",
+        "agent-trial"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    },
+    {
+      "id": "AK-055",
+      "slug": "roselline-test",
+      "kind": "v07_roselline_test",
+      "variant": "roselline-test",
+      "variantKey": "v07_roselline_test",
+      "category": "V0.7 Trial",
+      "description": "Audit a benchmark report for required evidence, valid score bounds, and verifiability.",
+      "difficulty": 5,
+      "weight": 18,
+      "title": "Roselline Test",
+      "tags": [
+        "v0.7",
+        "arena",
+        "agent-trial"
+      ],
+      "checks": [
+        "visible_tests",
+        "hidden_tests",
+        "mutation_killed",
+        "secret_hygiene",
+        "patch_scope",
+        "deterministic_rerun"
+      ]
+    }
+  ],
+  "scoring": {
+    "correctness": 55,
+    "test_quality": 15,
+    "patch_quality": 10,
+    "security": 10,
+    "efficiency": 5,
+    "reproducibility": 5
+  }
+}
