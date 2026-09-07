@@ -1,6 +1,10 @@
 # ☠️ AGENT KILLER
 ## The Agent Trial — Where Coding Agents Come to Prove They Can Survive.
+<p align="center">\n  <img src="assets/agent-killer-logo.png" alt="Agent Killer — The Agent Trial" width="520">\n</p>\n\n**Current release: v0.7.15**  
 
+**Benchmark edition: v0.7.11**  
+**Open source: MIT**  
+**Built by Rosellines × Mikasa**
 **Current release: v0.7.15**  
 **Benchmark edition: v0.7.11**  
 **Open source: MIT**  
